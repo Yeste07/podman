@@ -7,22 +7,40 @@
 
 <br>
 
-* OCI compatible 
-
 * management de conteneurs
 
-* sans daemon (directement RunC)
+* Podman = Pod Manager
 
-Golang
+* première release en 2018 (docker 2013)
 
+* OCI compatible 
+
+https://github.com/opencontainers/image-spec
+
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
 
 <br>
 
 * Podman supporté Redhat
 
+* au début debug pour CRI-O
+
+* sans daemon (directement RunC) donc par de root
+
+* langage : Golang
+
+* compatible : Ubuntu, Fedora, CentOS, Debian, OpenSuse et RHEL
+	client sur MacOS et Windows
+
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
+
 <br>
 
-* Remplaçant à la CLI Docker
+* Remplaçant à une partie CLI/Engine Docker
 
 <br>
 
@@ -55,6 +73,10 @@ Docker vs Podman :
 
 	* Podman > RunC > Kernel
 
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
+
 <br>
 
 Sites: 
@@ -84,6 +106,12 @@ spec:
     - containerPort: 80
 ```
 
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
+
+<br>
+
 Fonctionnalités
 
 	* cli identique à docker
@@ -92,12 +120,17 @@ Fonctionnalités
 
 	* endpoints
 
-	* extraction manifests pods
+	* générateur manifests pods
 
 	* accès distant
 
 	* choix du container runtime (RunC, Crun)
 
-	* 
+---------------------------------------------------------------------------
 
+# PODMAN : INTRODUCTION
 
+<br>
+
+Existe podman-compose : 
+https://github.com/containers/podman-compose

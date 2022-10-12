@@ -5,37 +5,6 @@
 # PODMAN : INTRODUCTION
 
 
-<br>
-
-* Podman supporté Redhat
-
-* Remplaçant à la CLI Docker
-
-* utilisation rootless (maintenant arrivé sur docker)
-
-* introduction de la notion de pods (hors kubernetes)
-
-* reprise des manifestes kubernetes
-
-* reprise de la CLI de docker strictement
-
-```
-alias docker='podman'
-```
-
-Docker vs Podman :
-
-	* Docker CLI > Docker Engine > ContainerD > RunC>  Kernel
-
-	* Podman > RunC > Kernel
-
-Sites: 
-
-https://podman.io/
-https://docs.podman.io/
-https://github.com/containers
-https://github.com/containers/podman
-https://github.com/containers/podman-desktop
 
 * si warning
 
@@ -67,6 +36,8 @@ podman container checkpoint <container_id>
 
 podman container restore <container_id>
 
+
+https://devopscube.com/podman-tutorial-beginners/
 
 * migration
 sudo podman container checkpoint <container_id> -e /tmp/checkpoint.tar.gz
