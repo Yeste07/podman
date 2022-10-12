@@ -7,55 +7,27 @@
 
 <br>
 
-* OCI compatible 
-
-* management de conteneurs
-
-* sans daemon (directement RunC)
-
-Golang
-
-
-<br>
-
 * Podman supporté Redhat
-
-<br>
 
 * Remplaçant à la CLI Docker
 
-<br>
-
 * utilisation rootless (maintenant arrivé sur docker)
-
-<br>
 
 * introduction de la notion de pods (hors kubernetes)
 
-<br>
-
 * reprise des manifestes kubernetes
-
-<br>
 
 * reprise de la CLI de docker strictement
 
 ```
 alias docker='podman'
 ```
------------------------------------------------------------------------------
-
-# PODMAN : INTRODUCTION
-
-<br>
 
 Docker vs Podman :
 
 	* Docker CLI > Docker Engine > ContainerD > RunC>  Kernel
 
 	* Podman > RunC > Kernel
-
-<br>
 
 Sites: 
 
@@ -65,13 +37,19 @@ https://github.com/containers
 https://github.com/containers/podman
 https://github.com/containers/podman-desktop
 
-<br>
+* si warning
+
+```
+systemctl --user status dbus.socket
+systemctl --user enable --now dbus.socket
+systemctl --user status dbus.socket
+```
+
 
 podman run --name c1 -it docker.io/busybox
 podman generate kube c1 > c1.yaml
 podman play kube c1.yaml
 
-```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -82,22 +60,33 @@ spec:
     image: docker.io/nginx:latest
     ports:
     - containerPort: 80
-```
 
-Fonctionnalités
+podman login docker.io
 
-	* cli identique à docker
+podman container checkpoint <container_id>
 
-	* pods (multicontainers, hostname...)
-
-	* endpoints
-
-	* extraction manifests pods
-
-	* accès distant
-
-	* choix du container runtime (RunC, Crun)
-
-	* 
+podman container restore <container_id>
 
 
+* migration
+sudo podman container checkpoint <container_id> -e /tmp/checkpoint.tar.gz
+scp /tmp/checkpoint.tar.gz <destination_system>:/tmp
+sudo podman container restore -i /tmp/checkpoint.tar.gz
+
+
+podman --runtime crun run -it docker.io/busybox
+
+
+podman  run --name docker-nginx -p 8080:80 docker.io/nginx
+podman port -l
+
+/etc/containers/registries.conf.d/shortnames.conf
+
+/etc/containers/registries.conf
+[registries.search]
+registries = ['docker.io']
+
+$HOME/.config/containers/registries.conf
+
+
+https://devopscube.com/podman-tutorial-beginners/
