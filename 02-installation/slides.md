@@ -61,3 +61,6 @@ $HOME/.config/containers/registries.conf
 
 
 https://devopscube.com/podman-tutorial-beginners/
+
+
+https://docs.podman.io/en/latest/markdown/podman-generate-systemd.1.html
