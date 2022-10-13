@@ -83,9 +83,6 @@ https://github.com/containers/podman-desktop
 
 ---------------------------------------------------------------------------
 
-
----------------------------------------------------------------------------
-
 # PODMAN : INTRODUCTION
 
 <br>
@@ -111,6 +108,7 @@ https://github.com/containers/podman-desktop
 ```
 alias docker='podman'
 ```
+
 -----------------------------------------------------------------------------
 
 # PODMAN : INTRODUCTION
@@ -129,7 +127,6 @@ Docker vs Podman :
 
 <br>
 
-podman run --name c1 -it docker.io/busybox
 podman generate kube c1 > c1.yaml
 podman play kube c1.yaml
 
