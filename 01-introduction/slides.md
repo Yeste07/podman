@@ -13,9 +13,10 @@
 
 * première release en 2018 (docker 2013)
 
-* OCI compatible 
+* Podman supporté Redhat
 
-https://github.com/opencontainers/image-spec
+* langage : Golang
+
 
 ---------------------------------------------------------------------------
 
@@ -23,16 +24,65 @@ https://github.com/opencontainers/image-spec
 
 <br>
 
-* Podman supporté Redhat
+Machine Virtuelle
+
+	* VM = Apps + Libs + Kernel
+
+	* Emulation du Hardware (réseau, disques, cpu, ram...)
+
+Apps > Libs > Kernel | Hyperviseur > Hardware
+
+<br>
+
+Conteneur
+
+	* Conteneur = Apps + Libs
+
+Apps > Libs | Kernel > Serveur > Hardware
+
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
+
+<br>
+
+Définitions :
+
+	* conteneur : processus actif (PID) et isolé (ressources, user...)
+
+	* image : code et environnement du processus (stockage et partage)
+
+<br>
+
+* OCI compatible 
+
+https://github.com/opencontainers/image-spec
+
+
+
+---------------------------------------------------------------------------
+
+# PODMAN : INTRODUCTION
+
+<br>
 
 * au début debug pour CRI-O
 
 * sans daemon (directement RunC) donc par de root
 
-* langage : Golang
-
 * compatible : Ubuntu, Fedora, CentOS, Debian, OpenSuse et RHEL
 	client sur MacOS et Windows
+
+Sites: 
+
+https://podman.io/
+https://docs.podman.io/
+https://github.com/containers
+https://github.com/containers/podman
+https://github.com/containers/podman-desktop
+
+---------------------------------------------------------------------------
+
 
 ---------------------------------------------------------------------------
 
@@ -76,16 +126,6 @@ Docker vs Podman :
 ---------------------------------------------------------------------------
 
 # PODMAN : INTRODUCTION
-
-<br>
-
-Sites: 
-
-https://podman.io/
-https://docs.podman.io/
-https://github.com/containers
-https://github.com/containers/podman
-https://github.com/containers/podman-desktop
 
 <br>
 
