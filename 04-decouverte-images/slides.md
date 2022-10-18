@@ -66,7 +66,18 @@ cat $HOME/.config/containers/registries.conf
 podman pull nginx
 ```
 
-Note : où est-elle stockée ?
+<br>
+
+* supprimer une image
+
+```
+podman image rm xxxxx
+podman rmi xxx
+```
+
+<br>
+
+* où est-elle stockée ?
 
 ```
 podman info
