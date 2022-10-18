@@ -6,14 +6,6 @@
 
 
 
-* si warning
-
-```
-systemctl --user status dbus.socket
-systemctl --user enable --now dbus.socket
-systemctl --user status dbus.socket
-```
-
 
 podman run --name c1 -it docker.io/busybox
 podman generate kube c1 > c1.yaml
@@ -48,7 +40,6 @@ sudo podman container restore -i /tmp/checkpoint.tar.gz
 podman --runtime crun run -it docker.io/busybox
 
 
-podman  run --name docker-nginx -p 8080:80 docker.io/nginx
 podman port -l
 
 /etc/containers/registries.conf.d/shortnames.conf
@@ -58,6 +49,11 @@ podman port -l
 registries = ['docker.io']
 
 $HOME/.config/containers/registries.conf
+
+
+https://github.com/rootless-containers/slirp4netns
+ip netns list
+
 
 
 https://devopscube.com/podman-tutorial-beginners/
