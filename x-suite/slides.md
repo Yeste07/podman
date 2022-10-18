@@ -29,6 +29,8 @@ podman container checkpoint <container_id>
 podman container restore <container_id>
 
 
+https://www.redhat.com/sysadmin/image-stores-podman
+
 https://devopscube.com/podman-tutorial-beginners/
 
 * migration
