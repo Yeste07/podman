@@ -49,8 +49,26 @@ Note : run en arrière plan -d
 
 <br>
 
+Attach : exemple
+
+```
+podman attach c1
+```
+
+<br>
+
 * Attention : sortir d'un attach
 
 ```
 Ctrl-P / Ctrl-Q
 ```
+
+----------------------------------------------------------------------
+
+# PODMAN : Intéragir - Attach vs Exec 
+
+
+
+Bref... On est jamais DANS un conteneur ;)
+
+Mais à côté
