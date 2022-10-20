@@ -12,27 +12,44 @@ Définitions :
 
 	* image : code et environnement du processus (stockage et partage)
 
+----------------------------------------------------------------------
+
+# PODMAN : Intéragir - Attach vs Exec 
+
 <br>
 
 * Comment "entrer" dans un conteneur existant ?
 
 		podman exec vs podman attach
 
-* exec = création d'un deuxième conteneur avec le même env
+	* exec = deuxième conteneur avec le même env/namespaces...
+
+	* attach = atatchement au processus existant 
+
+----------------------------------------------------------------------
+
+# PODMAN : Intéragir - Attach vs Exec 
+
+<br>
+
+* Exec : exemple
 
 ```
 podman ps
 podman run -ti --name c1 debian:latest bash
 podman exec -ti c1 bash
+ps fauxwww
 ```
 
 Note : run en arrière plan -d
 
+----------------------------------------------------------------------
 
+# PODMAN : Intéragir - Attach vs Exec 
 
 <br>
 
-* sortir d'un attach
+* Attention : sortir d'un attach
 
 ```
 Ctrl-P / Ctrl-Q
