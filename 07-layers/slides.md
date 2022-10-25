@@ -123,8 +123,8 @@ Note : attention si un layer = plus de cache :)
 * l'historique d'une image
 
 ```
-docker history --no-trunc monimage:maversion
-docker history xavki:v1.0 --format "{{.ID}}\t{{.CreatedBy}}"
+podman history --no-trunc monimage:maversion
+podman history xavki:v1.0 --format "{{.ID}}\t{{.CreatedBy}}"
 ```
 
 ----------------------------------------------------------------------------
@@ -134,7 +134,7 @@ docker history xavki:v1.0 --format "{{.ID}}\t{{.CreatedBy}}"
 <br>
 
 ```
-docker diff test
+podman diff test
 ```
 
 ----------------------------------------------------------------------------
